@@ -40,19 +40,19 @@ function SignUpForm({setUser}) {
     <div>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
-            <label>Name</label>
+            <label>Name*</label>
             <input type="text" name="name" value={formData.name} onChange={handleChange} required/>
             
-            <label>Email</label>
+            <label>Email*</label>
             <input type="text" name="email" value={formData.email} onChange={handleChange} required/>
             
-            <label>password</label>
+            <label>Password*</label>
             <input type="password" name="password" value={formData.password} onChange={handleChange} required/>
             
-            <label>Confirm</label>
+            <label>Confirm Password*</label>
             <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required/>
 
-            <button type="submit" disabled={disable}>SIGN UP</button>
+            <button type="submit" disabled={disable}>Create Your Account</button>
         </form>
       </div>
 

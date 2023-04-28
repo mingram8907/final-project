@@ -8,11 +8,20 @@ function NavBar({ user, setUser }) {
   };
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
+      <span>Welcome back, {user.name.charAt(0).toUpperCase() + user.name.slice(1)}!</span>
+      <br />
+      <Link to="/dash">Dashboard</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link> <span>Welcome, {user.name}</span>{" "}
+      <Link to="/transactions">All Transactions</Link>
+      &nbsp; | &nbsp;
+      <Link to="/transactions/new">New Transaction</Link>
+      &nbsp; | &nbsp;
+      {/* <Link to="/orders">Order History</Link>
+      &nbsp; | &nbsp;
+      <Link to="/orders/new">New Order</Link> 
+      &nbsp; | &nbsp; */}
       <Link to="" onClick={handleLogOut}>
-        Logout
+        Sign Out
       </Link>
     </nav>
   );

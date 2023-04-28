@@ -10,15 +10,15 @@ function AuthPage({ setUser }) {
     <main className="AuthPage">
       <h1>Auth Page</h1>
 
-      <button onClick={() => setShowLogin(!showLogin)}>
-        {showLogin ? "Sign up" : "Sign in"}
-      </button>
-
       {showLogin ? (
         <LoginForm setUser={setUser} />
       ) : (
         <SignUpForm setUser={setUser} />
       )}
+
+      <button onClick={() => setShowLogin(!showLogin)}>
+        {showLogin ? "New User? Create Account" : "Already have an account? Log In"}
+      </button>
     </main>
   );
 }

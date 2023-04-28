@@ -35,10 +35,10 @@ return (
     <div className="form-container" onSubmit={handleSubmit}>
 
       <form autoComplete="off" >
-        <label>Email</label>
+        <label>Email*</label>
         <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
 
-        <label>Password</label>
+        <label>Password*</label>
         <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
         <button type="submit">LOG IN</button>
       </form>
