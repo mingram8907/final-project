@@ -5,19 +5,19 @@ function NewTransactionPage() {
         <div>
             <h1>New Transaction</h1>
 
-            <form action="">
+            <form action="/transactions" method="POST">
                 Transaction Date: 
-                <input type="datetime-local" name="date" />
+                <input type="date" name="date" />
                 <br />
 
-                Type: 
+                Select Type: 
                 <select name="type" id="type" size={2}>
                     <option value="deposit">Deposit</option>
                     <option value="expense">Expense</option>
                 </select>
                 <br />
 
-                Category: 
+                Select Category: 
                 <select name="category" id="" size={4}>
                     <option value="paycheck">Paycheck</option>
                     <option value="gift">Gift</option>
@@ -29,8 +29,11 @@ function NewTransactionPage() {
                     <option value="food">Food</option>
                 </select>
 
-                Amount:
-                <input type="number" name="amount" />
+                Enter Amount:
+                <input type="number" name="amount" datatype="currency" />
+
+                Add Note:
+                <input type="text" name="note" />
 
                 <button type="submit">Submit</button>
             </form>
