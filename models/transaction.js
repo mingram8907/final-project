@@ -7,9 +7,12 @@ const transactionSchema = new mongoose.Schema({
     category: {type: String, required: true},
     amount: {type: Number, required: true},
     note: {type: String, maxLength: 255}
-},
-{ timestamps: true }
-)
+}, { 
+    timestamps: true,
+    toJSON: function(doc, ret) {
+        return ret;
+    } 
+});
 
 
 const Transaction = mongoose.model('Transaction', transactionSchema)

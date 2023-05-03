@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {signUp} from '../utilities/users-service';
+import { useNavigate } from "react-router-dom";
 
 function SignUpForm({setUser}) {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ function SignUpForm({setUser}) {
   });
 
   const disable = formData.password !== formData.confirm;
+
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => { 
     e.preventDefault(); 
@@ -26,6 +29,7 @@ function SignUpForm({setUser}) {
       // returns a token with the user info
       const user = await signUp(userData); // user service
       setUser(user);
+      navigate('/dash')
 
     } catch (error) {
       setFormData({...formData, error: "Sign Up Failed - Try Again"})

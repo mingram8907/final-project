@@ -6,6 +6,6 @@ const transactionsCtrl = require('../../controllers/api/transactions');
 
 
 // GET /api/transactions
-router.post('/transactions', transactionsCtrl.index)
+router.post('/', transactionsCtrl.create)
 
 module.exports = router;
