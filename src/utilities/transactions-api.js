@@ -26,6 +26,17 @@ export async function addTransaction(newTransaction) {
     return sendRequest(BASE_URL, 'POST', newTransaction)
 }
 
+
+
+
+
+
+
+
 export function getAllTransactions() {
     return sendRequest(BASE_URL)
+}
+
+export function getTransactionById(id) {
+    return sendRequest(`${BASE_URL}/${id}`)
 }
